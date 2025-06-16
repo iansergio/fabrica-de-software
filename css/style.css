@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+nav {
+    width: 100%;
+    background-color: #f85f1e;
+    overflow: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    float: left;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+nav a:hover {
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.sidenav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 59px;
+    background-color: #ebebeb;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    color: #161616;
+    transition: 0.3s;
+}
+
+.closebtn {
+    position: relative;
+    z-index: 1;
+    left: 80%;
+    font-size: 35px;
+}
+
+.logout-btn {
+    position: relative;
+    top: 56%;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #4e4e4e;
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+    .navbar a {
+        float: none;
+        display: block;
+    }
+}
