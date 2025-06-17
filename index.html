@@ -5,42 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ContaCerta</title>
-
-    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a onclick="openNav()"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                    class="bi bi-list" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-                </svg></a>
-            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                    class="bi bi-person-fill" viewBox="0 0 16 16">
-                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-                </svg></a>
-        </nav>
-
-        <nav>
-            <div id="sidenav" class="sidenav">
-                <a class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="#">Relatório</a>
-                <a href="#">Painel</a>
-                <a href="#">Vendas</a>
-                <a href="#">Cliente</a>
-                <a href="#">Configuração</a>
-                <a class="logout-btn" href="#">Sair</a>
-            </div>
-        </nav>
-    </header>
-
+    <header></header>
+    <main>
+        <aside>
+            <nav>
+                <h2>Finanças</h2>
+                <div class="nav-links">
+                    <a onclick="loadPage('pages/dashboard.html', this)"><i class="bi bi-bar-chart-fill"></i> Dashboard</a>
+                    <a onclick="loadPage('pages/income.html', this)" class="active"><i class="bi bi-arrow-up-right"></i></i> Renda</a>
+                    <a onclick="loadPage('pages/expenses.html', this)"><i class="bi bi-arrow-down-left"></i> Gastos</a>
+                    <a onclick="loadPage('pages/transactions.html', this)"><i class="bi bi-arrow-left-right"></i> Transações</a>
+                </div>
+            </nav>
+        </aside>
+        <section id="content"></section>
+    </main>
 
     <footer>
         <p>&copy; 2025 ContaCerta. Todos os direitos reservados.</p>
     </footer>
-    <script src="/js/main.js"></script>
+
+    <script src="js/main.js"></script>
 </body>
 
 </html>
