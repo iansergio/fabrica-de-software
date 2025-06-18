@@ -1,11 +1,3 @@
-const openNav = () => {
-    document.getElementById("sidenav").style.width = "250px";
-}
-
-const closeNav = () => {
-    document.getElementById("sidenav").style.width = "0";
-}
-
 const loadPage = (page, element) => {
     fetch(page)
         .then(res => {

@@ -12,12 +12,14 @@ body {
 
 main {
     display: flex;
+    padding: 0.5em;
+    padding-bottom: 1em;
     width: 55rem;
     height: 45rem;
     font-family: sans-serif;
     background-color: #f9f9f9;
     border-radius: 10px;
-    box-shadow: #00000030 0px 10px 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 }
 
 aside {
@@ -26,7 +28,9 @@ aside {
 
 aside h2 {
     color: #161616;
-    text-align: center;
+    text-align: left;
+    margin-left: 1em;
+    font-weight: normal;
 }
 
 aside nav .nav-links {
@@ -38,7 +42,7 @@ aside nav .nav-links {
 } */
 
 aside nav .nav-links a.active {
-    background-color: #f85f1e;
+    background-color: rgb(0, 150, 255);
     color: #ffffff;
 }
 
@@ -56,23 +60,64 @@ aside nav .nav-links a {
 section {
     border-left: 1px solid #eeeeee;
     width: 75%;
+    display: flex;
+    flex-direction: column;
 }
 
 section h2 {
     color: #161616;
-    text-align: center;
+    text-align: left;
+    margin-left: 1em;
+    font-weight: normal;
 }
 
-.closebtn {
-    position: relative;
-    z-index: 1;
-    left: 80%;
-    font-size: 35px;
+section .informations {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.logout-btn {
-    position: relative;
-    top: 56%;
+section .info-item {
+    width: 11.6em;
+    padding: 0 2em 0 2em;
+    margin: 0.5em;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px;
+}
+
+section .informations .info-item:last-child {
+    background-image: linear-gradient(to bottom, #ffffff 25%, rgb(0, 158, 96) 200%);
+    border-radius: 8px;
+}
+
+section .info-item h3 {
+    font-weight: normal;
+    font-size: 15px;
+}
+
+section .info-item p {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+section .graphs {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+section .graphs .graph-item{
+    width: 40%;
+    padding: 0 2em 0 2em;
+    margin: 0.5em;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px;
+}
+
+section .graphs .graph-item:first-child{
+    width: 60%;
 }
 
 footer {
@@ -94,12 +139,13 @@ footer {
         width: 100%;
         height: auto;
         box-shadow: none;
-        border-radius: 0;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px; 
     }
 
     aside {
         width: 100%;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid #dddddd;
     }
 
     aside nav .nav-links {
