@@ -28,7 +28,7 @@ Plotly.newPlot('lineChart', data, layout, config);
 // Gráfico de pizza
 var data2 = [{
     values: [19, 26, 55],
-    labels: ['Alimentação', 'Lazer', 'Assinaturas'],
+    labels: ['Alimentação', 'Entretenimento', 'Assinaturas'],
     type: 'pie',
     hole: .6
 }];

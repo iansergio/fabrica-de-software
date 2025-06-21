@@ -1,16 +1,17 @@
 body {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
 main {
     display: flex;
-    height: 90vh;
+    height: 100%;
     font-size: 15px;
     font-family: sans-serif;
     border-radius: 10px;
-    margin: 0 auto;
     margin: 1em;
+    padding: 1em;
     background-color: #f9f9f9;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 }
@@ -90,16 +91,32 @@ section p {
     box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px;
 }
 
-footer {
-    position: relative;
-    bottom: 0;
-    text-align: center;
-    color: #999999;
+#recent-transactions {
+    border-collapse: collapse;
+    margin: 0 1em;
 }
 
-footer p {
-    margin: 0;
-    padding: 0;
+#recent-transactions td,
+#recent-transactions th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    width: 30%;
+}
+
+#recent-transactions tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#recent-transactions tr:hover {
+    background-color: #ddd;
+}
+
+#recent-transactions th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #f85f1e;
+    color: white;
 }
 
 /* ≤ 600px: Mobile */
@@ -110,10 +127,6 @@ footer p {
 
     aside {
         width: 35%;
-    }
-
-    footer {
-        font-size: 14px;
     }
 
     section {
@@ -128,7 +141,9 @@ footer p {
         font-size: 14px;
     }
 
-    
+    .graph-item {
+        display: none;
+    }
 }
 
 /* 601px–900px: Tablet */
