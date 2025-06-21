@@ -15,5 +15,8 @@ const loadPage = (page, element) => {
     links.forEach(link => link.classList.remove("active"))
 
     element.classList.add("active");
-
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+    loadPage('pages/general.html');
+});
