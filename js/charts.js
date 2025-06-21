@@ -1,34 +1,49 @@
-var config = {
-    responsive: true
-};
+var config = { responsive: true };
 
-var trace1 = {
-    x: [1, 2, 3, 4, 5, 6, 7, 8],
-    y: [10, 15, null, 17, 14, 12, 10, null, 15],
-    mode: 'lines',
+// Séries por data (dia do mês)
+var datas = ['20/02', '21/02', '22/02', '23/02', '24/02', '25/02', '26/02', '27/02', '28/02', '01/03'];
+
+// Despesas totais por dia
+var despesas = [0, 49.9 * 4, 0, 89.99, 39.9, 0, 199, 120, 320.4, 0];
+// 21/02 teve 4 vezes R$ 49,90 → 199.6
+
+// Receitas totais por dia
+var receitas = [4000, 0, 0, 0, 0, 1200, 0, 0, 350, 0];
+
+var traceDespesas = {
+    x: datas,
+    y: despesas,
+    mode: 'lines+markers',
+    name: 'Despesas',
+    line: { color: 'red' },
     connectgaps: true
 };
 
-var trace2 = {
-    x: [1, 2, 3, 4, 5, 6, 7, 8],
-    y: [16, null, 13, 10, 8, null, 11, 12],
-    mode: 'lines',
+var traceReceitas = {
+    x: datas,
+    y: receitas,
+    mode: 'lines+markers',
+    name: 'Receitas',
+    line: { color: 'green' },
     connectgaps: true
 };
 
-var data = [trace1, trace2,];
+var data = [traceDespesas, traceReceitas];
 
 var layout = {
+    title: 'Fluxo de Transações (Fev–Mar)',
+    xaxis: { title: 'Data', tickangle: -45 },
+    yaxis: { title: 'Valor (R$)', autorange: true },
+    margin: { t: 50, b: 80, l: 50, r: 20 },
     showlegend: false,
-    margin: { t: 0 },
 };
-Plotly.newPlot('lineChart', data, layout, config);
 
+Plotly.newPlot('lineChart', data, layout, config);
 
 // Gráfico de pizza
 var data2 = [{
-    values: [19, 26, 55],
-    labels: ['Alimentação', 'Entretenimento', 'Assinaturas'],
+    values: [490.3, 39.9, 27.5, 89.99, 199],
+    labels: ['Alimentação', 'Entretenimento', 'Transporte', 'Saúde', 'Educação'],
     type: 'pie',
     hole: .6
 }];
