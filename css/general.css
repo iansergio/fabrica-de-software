@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 section {
@@ -45,12 +45,6 @@ canvas {
     width: 100% !important;
     height: 300px !important;
 }
-
-
-/*
-.container .graph-item h3 {
-    font-size: 12px;
-} */
 
 @media (max-width: 600px) {
     section {

@@ -18,5 +18,6 @@ const loadPage = (page, element) => {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-    loadPage('pages/general.html');
+    let element = document.getElementById("load")
+    loadPage('pages/general.html', element);
 });

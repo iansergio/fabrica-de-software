@@ -30,10 +30,6 @@ aside nav .nav-links {
     border-radius: 3px;
 }
 
-/* aside nav .nav-links a:not(.active):hover {
-    text-decoration: underline;
-} */
-
 aside nav .nav-links a.active {
     background-color: #f85f1e;
     color: #ffffff;
