@@ -119,6 +119,10 @@ section p {
     color: white;
 }
 
+.dark-mode {
+    background-color: #161616;
+}
+
 /* ≤ 600px: Mobile */
 @media (max-width: 600px) {
     main {

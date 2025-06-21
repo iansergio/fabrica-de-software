@@ -16,3 +16,8 @@ const loadPage = (page, element) => {
 
     element.classList.add("active");
 }
+
+// const darkMode = () => {
+//     let element = document.body
+//     element.classList.toggle("dark-mode")
+// }
