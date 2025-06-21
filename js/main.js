@@ -16,8 +16,3 @@ const loadPage = (page, element) => {
 
     element.classList.add("active");
 }
-
-window.addEventListener('DOMContentLoaded', () => {
-    let element = document.getElementById("load")
-    loadPage('pages/general.html', element);
-});

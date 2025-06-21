@@ -6,7 +6,7 @@ body {
 main {
     display: flex;
     height: 90vh;
-    font-size: 15px; 
+    font-size: 15px;
     font-family: sans-serif;
     border-radius: 10px;
     margin: 0 auto;
@@ -46,6 +46,50 @@ aside nav .nav-links a {
     border-radius: 3px;
 }
 
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 1em;
+}
+
+section {
+    width: 75%;
+}
+
+section h3 {
+    font-size: 15px;
+    font-weight: normal;
+    text-align: left;
+    margin-left: 10px;
+    padding: 0;
+}
+
+section p {
+    font-size: 20px;
+    margin: 10px;
+    padding: 0;
+    font-weight: bold;
+}
+
+.container .info-item {
+    width: 31.2%;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px;
+}
+
+.container .graph-item:first-child {
+    width: 55%;
+}
+
+.container .graph-item {
+    width: 40%;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: rgba(14, 63, 126, 0.04) 0px 0px 0px 1px, rgba(42, 51, 69, 0.04) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.04) 0px 6px 6px -3px;
+}
+
 footer {
     position: relative;
     bottom: 0;
@@ -65,13 +109,26 @@ footer p {
     }
 
     aside {
-       width: 35%; 
+        width: 35%;
     }
 
     footer {
         font-size: 14px;
-        
     }
+
+    section {
+        width: 70%;
+    }
+
+    section h3 {
+        font-size: 13px;
+    }
+
+    section p {
+        font-size: 14px;
+    }
+
+    
 }
 
 /* 601px–900px: Tablet */
